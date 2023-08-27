@@ -2,6 +2,6 @@
 /* .display-none{
     display: none;
 } */
-.session-button.active{
-    display: none;
-}
+/* .active {
+    display: block!important;
+  } */

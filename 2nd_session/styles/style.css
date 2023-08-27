@@ -1,0 +1,254 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+body {
+  color: #383e45;
+  font-size: 0.9rem;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+.site-title {
+  width: 120px;
+  line-height: 1px;
+  padding: 10px 0;
+}
+.site-title a {
+  display: block;
+}
+.section-title {
+  display: inline-block;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 60px;
+  border-bottom: solid 1px #383e45;
+}
+.content-title {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto 100px auto;
+  padding: 0 4%;
+  text-align: center;
+}
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+#header ul {
+  display: flex;
+  padding: 10px 0;
+}
+#header li {
+  margin-left: 30px;
+}
+#header li a {
+  color: #24292e;
+}
+#header li a:hover {
+  opacity: 0.7;
+}
+
+/*-------------------------------------------
+Mainvisual
+-------------------------------------------*/
+#mainvisual {
+  margin-bottom: 80px;
+}
+#mainvisual img {
+  width: 100%;
+  /* max-width: 1920px; */
+  height: 600px;
+  object-fit: cover;
+}
+
+/*-------------------------------------------
+About
+-------------------------------------------*/
+#about .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+#about .text {
+  text-align: left;
+}
+
+/*-------------------------------------------
+Bicycle
+-------------------------------------------*/
+#bicycle ul {
+  display: flex;
+  justify-content: space-between;
+}
+#bicycle li {
+  width: 32%;
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+  font-size: 0.5rem;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 600px) {
+
+  /*-------------------------------------------
+  Mainvisual
+  -------------------------------------------*/
+  #mainvisual img {
+    height: calc(100vh - 60px);
+  }
+
+  /*-------------------------------------------
+  About
+  -------------------------------------------*/
+  #about .content {
+    flex-direction: column;
+  }
+  #about img {
+    margin-right: 0;
+  }
+
+  /*-------------------------------------------
+  Bicycle
+  -------------------------------------------*/
+  #bicycle ul {
+    flex-direction: column;
+  }
+  #bicycle li {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.menu-checkbox {
+  display: none;
+  }
+  
+  .drawer-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 200px;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out 0s;
+    background-color: #3584BB;
+    z-index: 20;
+  }
+  
+  .drawer-menu-list {
+    margin-top: 100px;
+  }
+  
+  .drawer-menu-item-link {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;;
+    margin-top: 20px;
+  }
+  
+  .menu-checkbox:checked ~ .drawer-menu {
+    transform: translateX(0);
+  }
+  
+  .drawer-icon {
+    cursor: pointer;
+    position: fixed;
+    top: 40px;
+    right: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+    background-color: #fff;
+  }
+  
+  .drawer-icon span,
+  .drawer-icon span:before,
+  .drawer-icon span:after {
+    content: '';
+      display: block;
+      height: 6px;
+      width: 40px;
+      border-radius: 3px;
+      background-color: #3584bb;
+      position: absolute;
+      transition: all 0.5s ease-in-out 0s;
+  }
+  
+  .drawer-icon span::before {
+    bottom: 12px;
+  }
+  
+  .drawer-icon span::after {
+    top: 12px;
+  }
+  
+  .menu-checkbox:checked ~ .drawer-icon {
+    background-color: #3584bb;
+  }
+  
+  .menu-checkbox:checked ~ .drawer-icon span {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  
+  .menu-checkbox:checked ~ .drawer-icon span::before {
+    bottom: 0;
+    transform: rotate(-45deg);
+    background-color: #fff;
+  }
+  
+  .menu-checkbox:checked ~ .drawer-icon span::after {
+    top: 0;
+    transform: rotate(45deg);
+    background-color: #fff;
+  }
+  
+  .menu-background {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0;
+    transition: all 0.5s ease-in-out 0s;
+  }
+  
+  .menu-checkbox:checked ~ .menu-background {
+    display: block;
+    opacity: 0.3;
+  }
+  
