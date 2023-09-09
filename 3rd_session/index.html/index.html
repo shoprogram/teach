@@ -4,17 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/style.css">
+    <script src="../js/main.js"></script>
 </head>
 
 <body>
     <div class="text-box">
         <div class="copy-text">
-            <input type="text" onclick="copyText()" />
-            <button>送信</button>
+            <input type="text" id="textarea"/>
+            <!-- <button class="button" onclick="copyText()">送信</button> -->
+            <button class="button" >送信</button>
         </div>
-        <div class="answer"></div>
+        <h1 id="answer"></h1>
     </div>
     
 </body>
-<script src="../js/Main.js"></script>
 </html>
