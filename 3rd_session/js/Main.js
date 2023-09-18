@@ -8,7 +8,3 @@ window.onload = function() {
     },false)
 
 }
-// function copyText() {
-//     text = document.getElementsByClassName("button");
-//     console.log("てすと");
-// }
