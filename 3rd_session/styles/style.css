@@ -1,0 +1,15 @@
+@charset "uft-8";
+
+.text-box {
+    height: 300px;
+    width: 1170px;
+}
+input {
+    width: 500px;
+    height: 40px;
+    font-size: 20px;
+}
+button {
+    width: 100px;
+    height: 45px;
+}
